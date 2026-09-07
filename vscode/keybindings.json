@@ -1,0 +1,138 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// VS Code Keybindings — Cross-Platform
+// ─────────────────────────────────────────────────────────────────────────────
+// STRATEGY:
+//   alt+X  → fires on ALL platforms (Windows, Linux, Mac)
+//   cmd+X  → fires on Mac only (cmd key does not exist on Windows/Linux)
+//   Both variants are included so this single file works everywhere unchanged.
+//
+// ⚠️  KNOWN CONFLICTS:
+//   alt+left / cmd+left    → overrides move-cursor-by-word / move-to-line-start
+//   alt+right / cmd+right  → overrides move-cursor-by-word / move-to-line-end
+//   alt+shift+up/down      → overrides Copy Line Up / Copy Line Down
+// ─────────────────────────────────────────────────────────────────────────────
+[
+    // ─── Go Back ──────────────────────────────────────────────────────────────
+    // ⚠️ alt+left overrides cursorWordStartLeft (move cursor back one word)
+    // ⚠️ cmd+left overrides cursorHome (move cursor to line start) on Mac
+    {
+        "key": "alt+left",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "cmd+left",
+        "command": "workbench.action.navigateBack"
+    },
+    // ─── Go Forward ───────────────────────────────────────────────────────────
+    // ⚠️ alt+right overrides cursorWordEndRight (move cursor forward one word)
+    // ⚠️ cmd+right overrides cursorEnd (move cursor to line end) on Mac
+    {
+        "key": "alt+right",
+        "command": "workbench.action.navigateForward"
+    },
+    {
+        "key": "cmd+right",
+        "command": "workbench.action.navigateForward"
+    },
+    // ─── Find All ─────────────────────────────────────────────────────────────
+    // cmd+f is already the default Find on Mac — included here for consistency
+    {
+        "key": "alt+f",
+        "command": "actions.find"
+    },
+    {
+        "key": "cmd+f",
+        "command": "actions.find"
+    },
+    // ─── Replace ──────────────────────────────────────────────────────────────
+    {
+        "key": "alt+r",
+        "command": "editor.action.startFindReplaceAction"
+    },
+    {
+        "key": "cmd+r",
+        "command": "editor.action.startFindReplaceAction"
+    },
+    // ─── Find Usages ──────────────────────────────────────────────────────────
+    // Only fires when the language server has a reference provider (e.g. JS, TS, Python)
+    {
+        "key": "alt+shift+u",
+        "command": "references-view.findReferences",
+        "when": "editorHasReferenceProvider"
+    },
+    {
+        "key": "cmd+shift+u",
+        "command": "references-view.findReferences",
+        "when": "editorHasReferenceProvider"
+    },
+    // ─── Quick Open Files ─────────────────────────────────────────────────────
+    {
+        "key": "cmd+o",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "alt+o",
+        "command": "workbench.action.quickOpen"
+    },
+    // ─── Open New Window ──────────────────────────────────────────────────────
+    {
+        "key": "alt+shift+w",
+        "command": "workbench.action.newWindow"
+    },
+    {
+        "key": "cmd+shift+w",
+        "command": "workbench.action.newWindow"
+    },
+    // ─── Open Folder ──────────────────────────────────────────────────────────
+    {
+        "key": "alt+shift+o",
+        "command": "workbench.action.files.openFolder"
+    },
+    {
+        "key": "cmd+shift+o",
+        "command": "workbench.action.files.openFolder"
+    },
+    // ─── Run and Debug ────────────────────────────────────────────────────────
+    {
+        "key": "alt+shift+r",
+        "command": "workbench.action.debug.start"
+    },
+    {
+        "key": "cmd+shift+r",
+        "command": "workbench.action.debug.start"
+    },
+    // ─── Add Cursor Above ─────────────────────────────────────────────────────
+    // ⚠️ Overrides default "Copy Line Up" (alt+shift+up)
+    {
+        "key": "alt+shift+up",
+        "command": "editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+shift+up",
+        "command": "editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    // ─── Add Cursor Below ─────────────────────────────────────────────────────
+    // ⚠️ Overrides default "Copy Line Down" (alt+shift+down)
+    {
+        "key": "alt+shift+down",
+        "command": "editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+shift+down",
+        "command": "editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    // ─── Save File ────────────────────────────────────────────────────────────
+    // cmd+s is already the default Save on Mac — included here for consistency
+    {
+        "key": "alt+s",
+        "command": "workbench.action.files.save"
+    },
+    {
+        "key": "cmd+s",
+        "command": "workbench.action.files.save"
+    }
+]

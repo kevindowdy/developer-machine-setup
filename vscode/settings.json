@@ -1,0 +1,32 @@
+{
+    // ─── Font ─────────────────────────────────────────────────────────────────
+    "editor.fontSize": 14,
+    // ─── Saving ───────────────────────────────────────────────────────────────
+    "editor.formatOnSave": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 5000,
+    // ─── Editor Behavior ──────────────────────────────────────────────────────
+    "editor.wordWrap": "off",
+    "editor.mouseWheelZoom": true,
+    "editor.formatOnPaste": true,
+    "editor.accessibilitySupport": "off",
+    "editor.autoClosingBrackets": "always",
+    // ─── Multi-Cursor ─────────────────────────────────────────────────────────
+    // "alt" = Alt+Click adds cursor (all platforms)
+    // Switch to "ctrlCmd" if you prefer Ctrl+Click (Win/Linux) / Cmd+Click (Mac)
+    // You cannot have both simultaneously — pick one
+    "editor.multiCursorModifier": "alt",
+    // ─── Minimap ──────────────────────────────────────────────────────────────
+    "editor.minimap.enabled": true,
+    "editor.minimap.autohide": "mouseover",
+    // ─── Code Actions on Save ─────────────────────────────────────────────────
+    // "explicit" = only runs on manual save (Ctrl/Cmd+S), not on auto-save
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    // ─── Files ────────────────────────────────────────────────────────────────
+    "files.insertFinalNewline": true,
+    // ─── Appearance ────────────────────────────────────────────────────────────────
+    "workbench.colorTheme": "Default High Contrast Light",
+}
