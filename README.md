@@ -26,3 +26,10 @@ Repository for storing local developer configurations, scripts and settings.
 ---
 
 
+## Instructions to Take a Snapshot of Installed VS Code Extensions
+New extensions should be saved inside the `extensions.txt` file for tracking.
+
+1. Install extensions however you want (GUI, CLI, marketplace)
+2. Run command: `--list-extensions > extensions.txt`
+3. Run commands: `git add extensions.txt && git commit -m "add <extension-name>" && git push`
+
