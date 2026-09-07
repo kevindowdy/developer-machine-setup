@@ -134,5 +134,39 @@
     {
         "key": "cmd+s",
         "command": "workbench.action.files.save"
+    },
+    // ─── Selection ────────────────────────────────────────────────────────────
+    // Select word by word
+    {
+        "key": "shift+alt+right",
+        "command": "cursorWordEndRightSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+cmd+right",
+        "command": "cursorEndSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+left",
+        "command": "cursorWordStartLeftSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+cmd+left",
+        "command": "cursorHomeSelect",
+        "when": "editorTextFocus"
+    },
+    // Select to end of line
+    {
+        "key": "shift+alt+down",
+        "command": "cursorEndSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+cmd+down",
+        "command": "cursorEndSelect",
+        "when": "editorTextFocus"
     }
 ]
+
