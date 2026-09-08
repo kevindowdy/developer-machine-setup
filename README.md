@@ -34,6 +34,23 @@ New extensions should be saved inside the `extensions.txt` file for tracking.
 3. Run commands: `git add extensions.txt && git commit -m "add <extension-name>" && git push`
 
 
+## Instructions for installing Git Aliases
+
+New aliases should be added to both `git/aliases.sh` and `git/aliases.ps1` so all platforms stay in sync.
+
+### Install on macOS / Linux / Git Bash
+1. Open `~/.bashrc` or `~/.zshrc`
+2. Add this line: `source /path/to/developer-machine-setup/git/aliases.sh`
+3. Restart your terminal or run `source ~/.bashrc` (or `~/.zshrc`)
+
+### Install on Windows (PowerShell)
+1. Open your PowerShell profile: `notepad $PROFILE`
+2. Add the line: `. "C:\path\to\developer-machine-setup\git\aliases.ps1"`
+3. Restart PowerShell or run `. $PROFILE`
+
+---
+
+
 ## How to Contribute
 
 Checkout main and add your suggested changes to a feature branch. Open a pull request and tag the `@kevindowdy`.

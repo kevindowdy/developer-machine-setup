@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.0] - 2026-09-07
+
+### Added
+
+- Git aliases (`git/aliases.sh` for bash/zsh, `git/aliases.ps1` for PowerShell) for common git commands (add, clone, checkout, commit, diff, fetch, push, pull, status, log, branch, switch, restore, stash, stash pop, reset, rebase, merge).
+
 ## [0.0.1] - 2026-09-07
 
 ### Added
